@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -37,7 +37,7 @@
             </div>
             <p class="contacto__lugar"><i class="fa-solid fa-location-dot"></i> Valencia, España</p>
         </section>
-        <form action="mailto:torresarmijo.arq@gmail.com" class="formulario" method="post" enctype="text/plain">
+        <form action="mailto:torresarmijo.arq@gmail.com" class="formulario" method="post" enctype="text/plain" id="formulario" novalidate>
             <div class="formulario__campo">
                 <label for="nombre" class="formulario__etiqueta">Nombre</label>
                 <input type="text" class="formulario__control" id="nombre" name="nombre" required>
@@ -51,6 +51,7 @@
                 <textarea name="mensaje" id="mensaje" class="formulario__control" rows="4" required></textarea>
             </div>
             <button class="boton" type="submit">Enviar &rarr;</button>
+            <p class="formulario__mensaje" id="mensaje-formulario" role="status"></p>
         </form>
     </main>
     <footer class="pie">
