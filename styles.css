@@ -209,7 +209,7 @@ a {
 
 .ficha__fila {
     padding: .9rem 0;
-    border-bottom: 1 px solid #2e2e2e;
+    border-bottom: 1px solid #2e2e2e;
 }
 
 .ficha dt {
@@ -239,7 +239,7 @@ a {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 1rem;
-    margin-bottom: 3rem;
+    margin-top: 3rem;
 }
 
 /* SOBRE MI */
@@ -257,7 +257,7 @@ a {
 }
 
 .sobre__texto {
-    margin: 1.5rem;
+    margin: 1.5rem 0;
     font-size: 1.2rem;
     line-height: 1.35;
     max-width: 60rem;
@@ -442,14 +442,30 @@ a {
     background: none;
     border: 0;
     color: #f2efe9;
-    font-size: 2.25;
+    font-size: 2.25rem;
+    line-height: 1;
+    cursor: pointer;
 }
+
+.formulario__mensaje{
+    min-height: 1.4em;
+    font-size: .9rem;
+}
+
+.formulario__mensaje--error{
+    color: #ff8a7a;
+}
+
+.formulario__mensaje--ok{
+    color: #9fd6a8;
+}
+
 
 /* TABLET Y ESCRITORIO */
 @media (min-width:768px) {
 
     .contenedor,
-    .obra__fila {
+    .obras__fila {
         padding-left: 3.5rem;
         padding-right: 3.5rem;
     }
@@ -458,7 +474,7 @@ a {
         scroll-padding: 0 3.5rem;
     }
 
-    .cabecera_interior {
+    .cabecera__interior {
         padding-top: 1.25rem;
         padding-bottom: 1.25rem;
     }
@@ -468,7 +484,7 @@ a {
         font-size: 1.1rem;
     }
 
-    .obras_item {
+    .obras__item {
         flex-basis: 430px;
     }
 
