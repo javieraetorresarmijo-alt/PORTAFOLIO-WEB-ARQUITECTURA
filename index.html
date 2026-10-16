@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javiera Torres Armijo · Arquitecta · Portafolio</title>
-    <meta name="description" content="Portafolio de Javiera Torres Armijo, arquitecta, diseñadora gráfica y web. Trabajos seleccionados 2020 - 2025">
+    <meta name="description"
+        content="Portafolio de Javiera Torres Armijo, arquitecta, diseñadora gráfica y web. Trabajos seleccionados 2020 - 2025">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header class="cabecera">
         <div class="contenedor cabecera__interior">
@@ -27,11 +30,13 @@
     <main class="obras">
         <ul class="obras__fila">
             <li class="obras__item presentacion">
-                <h1 class="presentacion__texto">Arquitecta apasionada por la expresión visual: desde el primer boceto hasta el modelado 3D y la renderización final.</h1>
+                <h1 class="presentacion__texto">Arquitecta apasionada por la expresión visual: desde el primer boceto
+                    hasta el modelado 3D y la renderización final.</h1>
             </li>
             <li class="obras__item">
                 <a href="obra-1.html" class="tarjeta">
-                    <img src="imgs/foto1.png" alt="Imagen principal de representación gráfica concurso CORMA" class="tarjeta__img" width="867" height="596">
+                    <img src="imgs/foto1.png" alt="Imagen principal de representación gráfica concurso CORMA"
+                        class="tarjeta__img" width="867" height="596">
                     <div class="tarjeta__texto">
                         <h2 class="tarjeta__titulo">Representación gráfica concurso CORMA</h2>
                         <p class="tarjeta__sub">Proyecto Taller VII · Concurso CORMA &rarr;</p>
@@ -40,7 +45,8 @@
             </li>
             <li class="obras__item">
                 <a href="obra-2.html" class="tarjeta">
-                    <img src="imgs/foto2.png" alt="Imagen principal de Parque conector Mapocho" class="tarjeta__img" height="657" width="912" loading="lazy">
+                    <img src="imgs/foto2.png" alt="Imagen principal de Parque conector Mapocho" class="tarjeta__img"
+                        height="657" width="912" loading="lazy">
                     <div class="tarjeta__texto">
                         <h2 class="tarjeta__titulo">Parque conector Mapocho</h2>
                         <p class="tarjeta__sub">Proyecto concurso Corma21 · Taller VIII &rarr;</p>
@@ -49,7 +55,8 @@
             </li>
             <li class="obras__item">
                 <a href="obra-3.html" class="tarjeta">
-                    <img src="imgs/foto3.png" alt="Imagen principal de Polideportivo Vicuña" class="tarjeta__img" height="657" width="928" loading="lazy">
+                    <img src="imgs/foto3.png" alt="Imagen principal de Polideportivo Vicuña" class="tarjeta__img"
+                        height="657" width="928" loading="lazy">
                     <div class="tarjeta__texto">
                         <h2 class="tarjeta__titulo">Polideportivo Vicuña</h2>
                         <p class="tarjeta__sub">Proyecto polideportivo · Taller IX &rarr;</p>
@@ -58,7 +65,9 @@
             </li>
             <li class="obras__item">
                 <a href="obra-4.html" class="tarjeta">
-                    <img src="imgs/foto4.png" alt="Imagen principal de Estación Terminal, Proyecto Tren Santiago - Melipilla" class="tarjeta__img" width="928" height="657" loading="lazy">
+                    <img src="imgs/foto4.png"
+                        alt="Imagen principal de Estación Terminal, Proyecto Tren Santiago - Melipilla"
+                        class="tarjeta__img" width="928" height="657" loading="lazy">
                     <div class="tarjeta__texto">
                         <h2 class="tarjeta__titulo">Estación terminal, Proyecto Tren Santiago - Melipilla</h2>
                         <p class="tarjeta__sub">Proyecto de título &rarr;</p>
@@ -71,9 +80,108 @@
     <footer class="pie">
         <div class="contenedor pie__interior">
             <p>&copy; Javiera Torres Armijo</p>
-            <div class="pie__contacto"><a href="mailto:torresarmijo.arq@gmail.com">torresarmijo.arq@gmail.com</a><a href="https://online.fliphtml5.com/nnvds/bmsx" target="_blank" rel="noopener">Portafolio completo</a></div>
+            <div class="pie__contacto"><a href="mailto:torresarmijo.arq@gmail.com">torresarmijo.arq@gmail.com</a><a
+                    href="https://online.fliphtml5.com/nnvds/bmsx" target="_blank" rel="noopener">Portafolio
+                    completo</a></div>
         </div>
     </footer>
-    
+    <script>
+        //año actual en el pie de la pagina
+        const anio = document.querySelector("#anio");
+        if (anio) {
+            anio.textContent = new Date().getFullYear();
+        }
+        //flechas para mover la fila de obras(en index)
+        const fila = document.querySelector(".obras__fila");
+        const flechaIzq = document.querySelector("#flecha-izq");
+        const flechaDer = document.querySelector("flecha-der");
+
+        if (fila && flechaIzq && flechaDer) {
+            // direccion: -1 izquierda, 1 derecha
+            const mover = (direccion) => {
+                const tarjeta = fila.querySelector(".obras__itemn");
+                const hueco = parseFloat(getComputedStyle(fila).columnGap);
+                fila.scrollBy({ left: direccion * (tarjeta.offsetWidth + hueco), behavior: "smooth" });
+            };
+            flechaIzq.addEventListener("click", () => mover(-1));
+            flechaDer.addEventListener("click", () => mover(1));
+        }
+        //visor de imagenes, click para verla mas grande
+        const imagenes = document.querySelectorAll(".obra__principal, .obra__secundaria, .galeria__img");
+        if (imagenes.length > 0) {
+            const visor = document.createElement("dialog");
+            visor.className = "visor";
+            visor.innerHTML = `
+                <button class="visor__cerrar" type="button" aria-label="Cerrar">&times;</button>
+                <img class="visor__img" src="" alt="">
+                <p class="visor__pie"></p>`;
+            document.body.appendChild(visor);
+
+            const visorImg = visor.querySelector(".visor__img");
+            const visorPie = visor.querySelector(".visor__pie");
+            let actual = 0; //posicion de imagen que se esta viendo
+
+            const mostar = (indice) => {
+                //% hace que al pasar de la ultima se vuelva a la primera CREEEO (esperemos q si)
+                actual = (indice + imagenes.length) % imagenes.length;
+                visorImg.src = imagenes[actual].src;
+                visorImg.at = imagenes[actual].alt;
+                visorPie.textContent = `${actual + 1} / ${imagenes.length} · ${imagenes[actual].alt}`;
+            };
+
+            imagenes.forEach((img, indice) => {
+                img.addEventListener("click", () => {
+                    mostrar(indice);
+                    visor.showModal();
+                });
+            });
+
+            visor.querySelector(".visor__cerrar").addEventListener("click", () => visor.close());
+            visor.addEventListener("clicl", (evento) => {
+                if (evento.target === visor) visor.close(); //clic fuera de la imagen
+            });
+            document.addEventListener("keydown", (evento) => {
+                if(!visor.open) return;
+                if(evento.key=== "ArrowRight") mostrar(actual + 1);
+                if(evento.key === "ArrowLeft") mostrar(actual - 1);
+            });
+        }
+        //formulario de contacto
+        const formulario = document.querySelector("#formulario");
+        const aviso = document.querySelector("#mensaje-formulario");
+
+        if(formulario && aviso){
+            const mostrarAviso = (texto, esError)=> {
+                aviso.textContent = texto;
+                aviso.className = "formulario__mensaje" + (esError ? "formulario__mensaje--error" : "formulario__mensaje--ok");
+            };
+
+            formulario.addEventListener("submit", (evento) => {
+                evento.preventDefault(); //evita q formulario se envie solo
+                const nombre = formulario.elements.nombre.value.trim();
+                const correo = formulario.elements.correo.value.trim();
+                const motivo = formulario.elements.motivo;
+                const motivoTexto = motivo.options[motivo.selectedIndex].text;
+                const mensaje = formulario.elements.mensaje.value.trim();
+                const correoValido = /^[\s@]+@[^\s@]+\.[^\s@]+$/.test(correo);
+
+                if(nombre.length < 2){
+                    mostrarAviso("Escribe tu nombre.", true);
+                }else if (!correoValido){
+                    mostrarAviso("Escribe un correo válido, por ejemplo nombre@correo.com", true);                    
+                }else if (mensaje.length < 10){
+                    mostrarAviso("El mensaje es muy corto (mínimo 10 caracteres).", true);
+                }else{
+                    const asunto = `Contacto desde el portafolio: ${motivoTexto}`;
+                    const cuerpo = `Nombre: ${nombre}\nCorreo: ${correo}\n\n${mensaje}`;
+                    window.location.href = `mailto:torresarmijo.arq@mail.com?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+                    mostrarAviso("Abriendo tu programa de correo...", false);
+                    formulario.reset();
+                }
+            });
+        }
+    </script>
+
 </body>
+
 </html>
