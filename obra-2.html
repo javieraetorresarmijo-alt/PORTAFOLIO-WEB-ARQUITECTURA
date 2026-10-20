@@ -29,45 +29,60 @@
     <main class="contenedor obra">
         <header class="obra__encabezado">
             <h1 class="titulo-gigante">Parque Conector Mapocho</h1>
-            <p class="obra__resumen">Edificio puente que conecta ambas riberas del río Mapocho, con fachada vegetal.</p>
+            <p class="obra__resumen">Edificio puente que conecta ambas riberas del río con fachada vegetal</p>
         </header>
-        <img src="" width="912" height="657" alt="Vista aérea del edificio conector sobre el parque"
-            class="obra__principal">
-        <section class="obra__cuerpo">
-            <figure><img src="" alt="Ilustración del espacio público bajo el edificio" width="804" height="452"
-                    loading="lazy" class="obra__secundaria">
-                <figcaption class="galeria__pie">Ilustración del espacio público bajo el edificio</figcaption>
-            </figure>
-            <dl class="ficha">
-                <div class="ficha__fila">
-                    <dt>Proyecto</dt>
-                    <dd>Proyecto concurso Corma21 · Taller VIII</dd>
-                </div>
-                <div class="ficha__fila">
-                    <dt>Equipo</dt>
-                    <dd>Torres · Hidalgo · Covarrubias</dd>
-                </div>
-                <div class="ficha__fila">
-                    <dt>Institución</dt>
-                    <dd>Facultad de Arquitectura · Universidad Mayor</dd>
-                </div>
-                <div class="ficha__fila">
-                    <dt>Autora</dt>
-                    <dd>Javiera Torres Armijo</dd>
-                </div>
-            </dl>
-        </section>
-        <section class="galeria" aria-label="Más imágenes">
-            <figure class="galeria__figura"><img src="" height="552" width="868" loading="lazy"
-                    alt="Planta del primer nivel con ferias" class="galeria__img">
-                <figcaption class="galeria__pie">Planta del primer nivel con ferias</figcaption>
-            </figure>
-            <figure class="galeria__figura"><img src="" width="867" height="547" loading="lazy"
-                    alt="Elevación longitudinal con fachada vegetal" class="galeria__img">
-                <figcaption class="galeria__pie">Elevación longitudinal con fachada vegetal</figcaption>
-            </figure>
+
+        <!-- Galeria imagen -->
+        <section class="galeria-obra" aria-label="Galería de imágenes">
+            <div class="galeria-obra__marco">
+                <button class="galeria-obra__flecha galeria-obra__flecha--izq" id="flecha-anterior" type="button"
+                    aria-label="Imagen anterior">&lsaquo;</button>
+                <img src="imgs/obra2/foto1.png" alt="Vista externa del edificio conector sobre el parque"
+                    class="galeria-obra__img">
+                <button class="galeria-obra__flecha galeria-obra__flecha--der" id="flecha-siguiente" type="button"
+                    aria-label="Imagen siguiente">&rsaquo;</button>
+                <p class="galeria-obra__contador">1/4</p>
+            </div>
+            <p class="galeria-obra__pie">Vista externa del edificio conector sobre el parque</p>
+            <ul class="miniaturas">
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 1"><img src="imgs/obra2/foto1.png"
+                            alt="Imagen externa del edificio conector sobre el parque"  class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 2"><img src="imgs/obra2/foto3.png"
+                            alt="Esquemas estructura Parque conector Mapocho" class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 3"><img src="imgs/obra2/foto4.png"
+                            alt="Planta del primer nivel con ferias"class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 4"><img src="imgs/obra2/foto5.png"
+                            alt="Planta del primer nivel sin ferias"class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 5"><img src="imgs/obra2/foto6.png"
+                            alt="Cortes Parque Conector Mapocho"class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 6"><img src="imgs/obra2/foto7.png"
+                            alt="Elevación Parque Conector Mapocho"class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 7"><img src="imgs/obra2/foto8.png"
+                            alt="Escantillon e isometrica de estructura"class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 8"><img src="imgs/obra2/foto9.png"
+                            alt="Isometrica de contexto"class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 9"><img src="imgs/obra2/foto2.png"
+                            alt="Imagen del espacio público bajo el edificio"class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 10"><img src="imgs/obra2/foto10.png"
+                            alt="Ilustración exterior Parque Conector Mapocho"class="miniatura__img"></button></li>
+
+            </ul>
         </section>
 
+        <dl class="ficha">
+            <div class="ficha__fila">
+                <dt>Proyecto</dt>
+                <dd>Taller VIII · Proyecto Conector Mapocho</dd>
+            </div>
+            <div class="ficha__fila">
+                <dt>Institución</dt>
+                <dd>Facultad de Arquitectura · Universidad Mayor</dd>
+            </div>
+            <div class="ficha__fila">
+                <dt>Autora</dt>
+                <dd>Javiera Torres Armijo</dd>
+            </div>
+        </dl>
         <nav class="paginacion" aria-label="Otras obras">
             <a href="index.html" class="boton">&larr; Todas las obras</a>
             <a href="obra-3.html" class="boton">Siguiente obra &rarr;</a>
@@ -77,8 +92,11 @@
         <div class="contenedor pie__interior">
             <p>&copy; <span id="anio">2026</span> Javiera Torres Armijo</p>
             <div class="pie__contacto"><a href="mailto:torresarmijo.arq@gmail.com">torresarmijo.arq@gmail.com</a><a
-                    href="https://online.fliphtml5.com/nnvds/bmsx" target="_blank" rel="noopener">Portafolio
-                    completo</a></div>
+                    href="https://www.linkedin.com/in/javiera-torres-4b315a322/" target="_blank"
+                    rel="noopener">LinkedIn</a>
+                <a href="https://online.fliphtml5.com/nnvds/bmsx" target="_blank" rel="noopener">Portafolio
+                    completo</a>
+            </div>
         </div>
     </footer>
     <script src="main.js" defer></script>

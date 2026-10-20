@@ -1,45 +1,93 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polideportivo Vicuña · Javiera Torres Armijo</title>
-    <meta name="description" content="Edificio deportivo y cultural en seis niveles con fachada de acero corten perforado.">
+    <meta name="description"
+        content="Edificio deportivo y cultural en seis niveles con fachada de acero corten perforado.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header class="cabecera">
         <div class="contenedor cabecera__interior">
             <a href="index.html" class="cabecera__nombre">Javiera Torres Armijo</a>
             <nav aria-label="Principal">
                 <ul class="menu">
-                    <li class="menu__item"><a href="index.html" aria-current="page"  class="menu__enlace">Obras</a></li>
+                    <li class="menu__item"><a href="index.html" aria-current="page" class="menu__enlace">Obras</a></li>
                     <li class="menu__item"><a href="sobre-mi.html" class="menu__enlace">Sobre mí</a></li>
-                    <li class="menu__item"><a href="contacto.html" class="boton">Contacto &rarr;</a></li>                    
+                    <li class="menu__item"><a href="contacto.html" class="boton">Contacto &rarr;</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <main class="contendor">
+    <main class="contenedor obra">
         <header class="obra__encabezado">
             <h1 class="titulo-gigante">Polideportivo Vicuña</h1>
-            <p class="obra__resumen">Edificio deportivo y cultural en seis niveles con fachada de acero corten perforado.</p>
+            <p class="obra__resumen">Edificio deportivo y cultural en seis niveles con fachada de acero corten
+                perforado.</p>
         </header>
-        <img src="" alt="Axonométrica del polideportivo con fachada de acero corten perforado" width="905" height="657"  class="obra__principal">
-        <section class="obra__cuerpo">
-            <figure><img src="" alt="Elevación norte" width="870" height="470" loading="lazy" class="obra__secundaria"><figcaption class="galeria__pie">Elevación norte</figcaption></figure>
-            <dl class="ficha">
-                <div class="ficha__fila"><dt>Proyecto</dt><dd>Proyecto polideportivo · Taller IX</dd></div>
-                <div class="ficha__fila"><dt>Institución</dt><dd>Facultad de arquitectura · Universidad Mayor</dd></div>
-                <div class="ficha__fila"><dt>Autora</dt><dd>Javiera Torres Armijo</dd></div>
-            </dl>
-        </section>
-        <section class="galeria" aria-label="Más imágenes"><figure class="galeria__figura"><img src="" alt="Plantas de los niveles 1 y 2" width="895" height="600" loading="lazy" class="galeria__img"><figcaption class="galeria__pie">Plantas de los niveles 1 y 2</figcaption></figure><figure class="galeria__figura"><img src="" alt="Corte transversal del edificio" width="867" height="595" loading="lazy" class="galeria__img"><figcaption class="galeria__pie">Corte transversal del edificio</figcaption></figure><figure class="galeria__figura"><img src="" alt="Diagramas de programa y circulaciones" width="868" height="600" loading="lazy" class="galeria__img"><figcaption class="galeria__pie">Diagramas de programa y circulaciones</figcaption></figure></section>
+        <!-- Galeria imagen -->
+        <section class="galeria-obra" aria-label="Galería de imágenes">
+            <div class="galeria-obra__marco">
+                <button class="galeria-obra__flecha galeria-obra__flecha--izq" id="flecha-anterior" type="button"
+                    aria-label="Imagen anterior">&lsaquo;</button>
+                <img src="imgs/obra3/foto1.png" alt="Render del polideportivo con fachada de acero corten perforado"
+                    class="galeria-obra__img">
+                <button class="galeria-obra__flecha galeria-obra__flecha--der" id="flecha-siguiente" type="button"
+                    aria-label="Imagen siguiente">&rsaquo;</button>
+                <p class="galeria-obra__contador">1/4</p>
+            </div>
+            <p class="galeria-obra__pie">Lista externa del edificio conector sobre el parque</p>
+            <ul class="miniaturas">
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 1"><img src="imgs/obra3/foto1.png"
+                            alt="Render del polideportivo con fachada de acero corten perforado"
+                            class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 2"><img src="imgs/obra3/foto2.png"
+                            alt="Esquemas estructura" class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 3"><img src="imgs/obra3/foto11.png"
+                            alt="Diagramas de programa y circulaciones Polideportivo Vicuña"class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 4"><img src="imgs/obra3/foto3.png"
+                            alt="Isométrica con contexto Polideportivo Vicuña"class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 5"><img src="imgs/obra3/foto4.png"
+                            alt="Plantas 1 y 2 nivel Polideportivo Vicuña"class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 6"><img src="imgs/obra3/foto5.png"
+                            alt="Plantas 3 y 4 nivel Polideportivo Vicuña"class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 7"><img src="imgs/obra3/foto6.png"
+                            alt="Plantas 5 y 6 nivel Polideportivo Vicuña"class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 8"><img src="imgs/obra3/foto7.png"
+                            alt="Corte BB Polideportivo Vicuña"class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 9"><img src="imgs/obra3/foto8.png"
+                            alt="Corte 2 Polideportivo Vicuña"class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 10"><img src="imgs/obra3/foto9.png"
+                            alt="Elevación norte Polideportivo Vicuña"class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 11"><img src="imgs/obra3/foto10.png"
+                            alt="Elevación poniente Polideportivo Vicuña"class="miniatura__img"></button></li>
 
+
+            </ul>
+        </section>
+
+        <dl class="ficha">
+            <div class="ficha__fila">
+                <dt>Proyecto</dt>
+                <dd>Taller IX · Polideportivo Vicuña</dd>
+            </div>
+            <div class="ficha__fila">
+                <dt>Institución</dt>
+                <dd>Facultad de Arquitectura · Universidad Mayor</dd>
+            </div>
+            <div class="ficha__fila">
+                <dt>Autora</dt>
+                <dd>Javiera Torres Armijo</dd>
+            </div>
+        </dl>
         <nav class="paginacion" aria-label="Otras obras">
             <a href="index.html" class="boton">&larr; Todas las obras</a>
             <a href="obra-4.html" class="boton">Siguiente obra &rarr;</a>
@@ -47,12 +95,16 @@
     </main>
      <footer class="pie">
         <div class="contenedor pie__interior">
-           <p>&copy; <span id="anio">2026</span> Javiera Torres Armijo</p>
+            <p>&copy; <span id="anio">2026</span> Javiera Torres Armijo</p>
             <div class="pie__contacto"><a href="mailto:torresarmijo.arq@gmail.com">torresarmijo.arq@gmail.com</a><a
-                    href="https://online.fliphtml5.com/nnvds/bmsx" target="_blank" rel="noopener">Portafolio
-                    completo</a></div>
+                    href="https://www.linkedin.com/in/javiera-torres-4b315a322/" target="_blank"
+                    rel="noopener">LinkedIn</a>
+                <a href="https://online.fliphtml5.com/nnvds/bmsx" target="_blank" rel="noopener">Portafolio
+                    completo</a>
+            </div>
         </div>
     </footer>
- <script src="main.js" defer></script>   
+    <script src="main.js" defer></script>
 </body>
+
 </html>

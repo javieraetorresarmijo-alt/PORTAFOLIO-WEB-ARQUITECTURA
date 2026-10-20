@@ -28,56 +28,81 @@
             </nav>
         </div>
     </header>
-    <main class="contendor">
+    <main class="contenedor obra">
         <header class="obra__encabezado">
-            <h1 class="titulo-gigante">Estación terminal, Proyecto Tren Santiago - Melipilla</h1>
+            <h1 class="titulo-gigante">Estación terminal Tren Santiago - Melipilla</h1>
             <p class="obra__resumen">Estación terminal y parque urbano sobre el trazado ferroviario Santiago -
                 Melipilla.</p>
         </header>
-        <img src="" alt="Axonométrica de la estación y el parque urbano" height="657" width="928" class="obra__principal">
 
-        <section class="obra__cuerpo">
-            <figure><img src="" alt="Análisis del contexto inmediato" height="550" width="866" loading="lazy"
-                    class="obra__secundaria">
-                <figcaption class="galeria__pie">Análisis del contexto inmediato</figcaption>
-            </figure>
-            <dl class="ficha">
-                <div class="ficha__fila">
-                    <dt>Proyecto</dt>
-                    <dd>Proyecto de título</dd>
-                </div>
-                <div class="ficha__fila">
-                    <dt>Institución</dt>
-                    <dd>Facultad de Arquitectura · Universidad Mayor</dd>
-                </div>
-                <div class="ficha__fila">
-                    <dt>Autora</dt>
-                    <dd>Javiera Torres Armijo</dd>
-                </div>
-            </dl>
+        <!-- Galeria imagen -->
+        <section class="galeria-obra" aria-label="Galería de imágenes">
+            <div class="galeria-obra__marco">
+                <button class="galeria-obra__flecha galeria-obra__flecha--izq" id="flecha-anterior" type="button"
+                    aria-label="Imagen anterior">&lsaquo;</button>
+                <img src="imgs/obra4/foto1.png" alt="Render exterior estación ferroviaria"
+                    class="galeria-obra__img">
+                <button class="galeria-obra__flecha galeria-obra__flecha--der" id="flecha-siguiente" type="button"
+                    aria-label="Imagen siguiente">&rsaquo;</button>
+                <p class="galeria-obra__contador">1/4</p>
+            </div>
+            <p class="galeria-obra__pie">Lista externa del edificio conector sobre el parque</p>
+            <ul class="miniaturas">
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 1"><img src="imgs/obra4/foto1.png"
+                            alt="Render exterior estación ferroviaria" class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 2"><img src="imgs/obra4/foto13.png"
+                            alt="Esquemas de análisis del contexto inmediato" class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 3"><img src="imgs/obra4/foto4.png"
+                            alt="Planimetría del parque urbano"class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 4"><img src="imgs/obra4/foto5.png"
+                            alt="Planimetría del primer nivel"class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 5"><img src="imgs/obra4/foto6.png"
+                            alt="Planimetría del segundo nivel"class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 6"><img src="imgs/obra4/foto7.png"
+                            alt="Planimetría del tercer nivel"class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 7"><img src="imgs/obra4/foto8.png"
+                            alt="Cortes de la estación"class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 8"><img src="imgs/obra4/foto9.png"
+                            alt="Cortes de la estación"class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 9"><img src="imgs/obra4/foto10.png"
+                            alt="Elevaciones de la estación"class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 10"><img src="imgs/obra4/foto11.png"
+                            alt="Isométrica de estructura"class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 11"><img src="imgs/obra4/foto12.png"
+                            alt="Render parque urbano"class="miniatura__img"></button></li>
+
+            </ul>
         </section>
-        <section class="galeria" aria-label="Más imágenes">
-            <figure class="galeria__figura"><img src="" alt="Planimetría del parque urbano" height="610" width="868"
-                    loading="lazy" class="galeria__img">
-                <figcaption class="galeria__pie">Planimetría del parque urbano</figcaption>
-            </figure>
-            <figure class="galeria__figura"><img src="" alt="Planimetría del primer nivel" height="597" width="720"
-                    loading="lazy" class="galeria__img">
-                <figcaption class="galeria__pie">Planimetría del primer nivel</figcaption>
-            </figure>
-            <figure class="galeria__figura"><img src="" alt="Cortes de la estación" height="590" width="870" loading="lazy" class="galeria__img"><figcaption class="galeria__pie">Cortes de la estación</figcaption></figure>
-        </section>
+
+        <dl class="ficha">
+            <div class="ficha__fila">
+                <dt>Proyecto</dt>
+                <dd>Proyecto de título</dd>
+            </div>
+            <div class="ficha__fila">
+                <dt>Institución</dt>
+                <dd>Facultad de Arquitectura · Universidad Mayor</dd>
+            </div>
+            <div class="ficha__fila">
+                <dt>Autora</dt>
+                <dd>Javiera Torres Armijo</dd>
+            </div>
+        </dl>
+        
         <nav class="paginacion" aria-label="Otras obras">
             <a href="index.html" class="boton">&larr; Todas las obras</a>
             <a href="obra-1.html" class="boton">Siguiente obra &rarr;</a>
         </nav>
     </main>
-     <footer class="pie">
+    <footer class="pie">
         <div class="contenedor pie__interior">
-           <p>&copy; <span id="anio">2026</span> Javiera Torres Armijo</p>
+            <p>&copy; <span id="anio">2026</span> Javiera Torres Armijo</p>
             <div class="pie__contacto"><a href="mailto:torresarmijo.arq@gmail.com">torresarmijo.arq@gmail.com</a><a
-                    href="https://online.fliphtml5.com/nnvds/bmsx" target="_blank" rel="noopener">Portafolio
-                    completo</a></div>
+                    href="https://www.linkedin.com/in/javiera-torres-4b315a322/" target="_blank"
+                    rel="noopener">LinkedIn</a>
+                <a href="https://online.fliphtml5.com/nnvds/bmsx" target="_blank" rel="noopener">Portafolio
+                    completo</a>
+            </div>
         </div>
     </footer>
     <script src="main.js" defer></script>

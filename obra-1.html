@@ -28,33 +28,41 @@
     </header>
     <main class="contenedor obra">
         <header class="obra__encabezado">
-            <h1 class="titulo-gigante">Representación gráfica concurso CORMA</h1>
-            <p class="obra__resumen">Imágenes exterior e interior del proyecto presentado al concurso CORMA.</p>
+            <h1 class="titulo-gigante">Concurso CORMA 2021</h1>
+            <p class="obra__resumen">Imágenes exterior e interior del proyecto presentado al concurso CORMA</p>
         </header>
-        <img src="" width="867" height="596"
-            alt="Imagen exterior del proyecto del concurso CORMA, con volúmenes de cubierta a dos aguas sobre una ladera"
-            class="obra__principal">
-        <section class="obra__cuerpo">
-            <figure><img src="" alt="Imagen interior del proyecto del concurso CORMA, con lucernarios en la cubierta"
-                    width="867" height="596" loading="lazy" class="obra__secundaria">
-                <figcaption class="galeria__pie">Imagen interior del proyecto del concurso CORMA, con lucernarios en la
-                    cubierta</figcaption>
-            </figure>
-            <dl class="ficha">
-                <div class="ficha__fila">
-                    <dt>Proyecto</dt>
-                    <dd>Proyecto Taller VII · Concurso CORMA</dd>
-                </div>
-                <div class="ficha__fila">
-                    <dt>Institución</dt>
-                    <dd>Facultad de Arquitectura · Universidad Mayor</dd>
-                </div>
-                <div class="ficha__fila">
-                    <dt>Autora</dt>
-                    <dd>Javiera Torres Armijo</dd>
-                </div>
-            </dl>
+       <!-- Galeria imagen -->
+        <section class="galeria-obra" aria-label="Galería de imágenes">
+            <div class="galeria-obra__marco">
+                <button class="galeria-obra__flecha galeria-obra__flecha--izq" id="flecha-anterior" type="button" aria-label="Imagen anterior">&lsaquo;</button>
+                <img src="imgs/obra1/foto1.png" alt="Imagen exterior del proyecto concurso CORMA, con volúmenes de cubierta a dos aguas" class="galeria-obra__img">
+                <button class="galeria-obra__flecha galeria-obra__flecha--der" id="flecha-siguiente" type="button" aria-label="Imagen siguiente">&rsaquo;</button>
+                <p class="galeria-obra__contador">1/4</p>
+            </div>
+            <p class="galeria-obra__pie">Imagen exterior del proyecto del concurso CORMA, con volúmenes de cubierta a dos aguas</p>
+            <ul class="miniaturas">
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 1"><img src="imgs/obra1/foto1.png" alt="Imagen exterior del proyecto del concurso CORMA, con volúmenes de cubierta a dos aguas" class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 2"><img src="imgs/obra1/foto2.png" alt="Imagen interior 1" class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 3"><img src="imgs/obra1/foto3.png" alt="Imagen interior 2" class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 4"><img src="imgs/obra1/foto4.png" alt="Imagen interior 3" class="miniatura__img"></button></li>
+            </ul>
         </section>
+
+        <dl class="ficha">
+            <div class="ficha__fila">
+                <dt>Proyecto</dt>
+                <dd>Proyecto Taller VII · Concurso CORMA</dd>
+            </div>
+            <div class="ficha__fila">
+                <dt>Institución</dt>
+                <dd>Facultad de Arquitectura · Universidad Mayor</dd>
+            </div>
+            <div class="ficha__fila">
+                <dt>Autora</dt>
+                <dd>Javiera Torres Armijo</dd>
+            </div>
+        </dl>
+    
         <nav class="paginacion" aria-label="Otras obras">
             <a href="index.html" class="boton">&larr; Todas las obras</a>
             <a href="obra-2.html" class="boton">Siguiente obra &rarr;</a>
@@ -64,8 +72,11 @@
         <div class="contenedor pie__interior">
             <p>&copy; <span id="anio">2026</span> Javiera Torres Armijo</p>
             <div class="pie__contacto"><a href="mailto:torresarmijo.arq@gmail.com">torresarmijo.arq@gmail.com</a><a
-                    href="https://online.fliphtml5.com/nnvds/bmsx" target="_blank" rel="noopener">Portafolio
-                    completo</a></div>
+                    href="https://www.linkedin.com/in/javiera-torres-4b315a322/" target="_blank"
+                    rel="noopener">LinkedIn</a>
+                <a href="https://online.fliphtml5.com/nnvds/bmsx" target="_blank" rel="noopener">Portafolio
+                    completo</a>
+            </div>
         </div>
     </footer>
     <script src="main.js" defer></script>
