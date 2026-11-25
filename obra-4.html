@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estación terminal, Proyecto Tren Santiago - Melipilla · Javiera Torres Armijo</title>
-    <meta name="description"
+    <title data-i18n="o4.title">Estación terminal, Proyecto Tren Santiago - Melipilla · Javiera Torres Armijo</title>
+    <meta name="description" data-i18n-content="o4.desc"
         content="Estación terminal y parque urbano sobre el trazado ferroviario Santiago - Melipilla.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,91 +20,132 @@
             <a href="index.html" class="cabecera__nombre">Javiera Torres Armijo</a>
             <nav aria-label="Principal">
                 <ul class="menu">
-                    <li class="menu__item"><a href="index.html" aria-current="page" class="menu__enlace">Obras</a></li>
-                    <li class="menu__item"><a href="sobre-mi.html" class="menu__enlace">Sobre mí</a>
-                    </li>
-                    <li class="menu__item"><a href="contacto.html" class="boton">Contacto &rarr;</a></li>
+                    <li class="menu__item"><a href="https://online.fliphtml5.com/nnvds/bmsx" class="boton boton--menu" target="_blank" rel="noopener" data-i18n="nav.portafolio">Portafolio
+                    completo &rarr;</a></li>
+                    <li class="menu__item"> <a href="index.html" class="menu__enlace" aria-current="page" data-i18n="nav.obras">Obras</a></li>
+                    <li class="menu__item"><a href="sobre-mi.html" class="menu__enlace" data-i18n="nav.sobre">Sobre mí</a></li>
+                    <li class="menu__item"><button class="boton boton--menu" id="boton-idioma" type="button" aria-label="Cambiar idioma">EN</button></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main class="contenedor obra">
-        <header class="obra__encabezado">
-            <h1 class="titulo-gigante">Estación terminal Tren Santiago - Melipilla</h1>
-            <p class="obra__resumen">Estación terminal y parque urbano sobre el trazado ferroviario Santiago -
-                Melipilla.</p>
+        <header class="obra__encabezado obra__encabezado--solo">
+            <h1 class="titulo-gigante" data-i18n-html="o4.titulo"><span class="obra__linea-menor">Estación terminal</span> Tren Santiago - Melipilla</h1>          
         </header>
+        <!-- Imagen de portada -->
+        <img src="imgs/obra4/foto1.png" alt="Vista externa de estación terminal" class="obra__principal">
+        <!-- Descripción del proyecto -->
+        <section class="concepto" aria-label="Descripción del proyecto">
+            <dl class="ficha">
+                <div class="ficha__fila">
+                    <dt data-i18n="ficha.proyecto">Proyecto</dt>
+                    <dd data-i18n="o4.proyecto">Proyecto de título · 2022</dd>
+                </div>
+                <div class="ficha__fila">
+                    <dt data-i18n="ficha.descripcion">Descripción</dt>
+                    <dd data-i18n="o4.desc1">Estación intermodal terminal del tren Santiago - Melipilla, que reúne tren, buses interurbanos,
+                        taxis y estacionamientos, junto a un parque urbano.</dd>
+                    <dd data-i18n="o4.desc2">La línea férrea divide la ciudad en dos. La estación cruza sobre las vías y conecta ambos
+                        costados con un paso peatonal sobre nivel.</dd>
+                    <dd data-i18n="o4.desc3">Una gran cubierta de acero cubre los andenes con el mínimo de pilares y deja libres los costados
+                        para áreas verdes y una plaza de acceso.</dd>
+                    <dd data-i18n="o4.desc4">La nueva línea tiene 61 km y 11 estaciones, reduce el viaje de 2 hrs a 46 min.</dd>
+                </div>
+
+                <div class="ficha__fila">
+                    <dt data-i18n="ficha.institucion">Institución</dt>
+                    <dd data-i18n="ficha.facultad">Facultad de Arquitectura · Universidad Mayor</dd>
+                </div>
+                <div class="ficha__fila">
+                    <dt data-i18n="ficha.autora">Autora</dt>
+                    <dd>Javiera Torres Armijo</dd>
+                </div>
+                <div class="ficha__fila">
+                    <dd><a href="docs/javiera-torres-memoria-titulo.pdf"
+                            download="memoria-proyecto-titulo-javiera-torres.pdf" class="boton" data-i18n="o4.descargar">Descargar memoria (PDF)
+                            &darr;</a></dd>
+                </div>
+            </dl>
+            <img src="imgs/obra4/foto13.png" alt="Diagrama del proyecto Estación terminal Tren Santiago - Melipilla"
+                class="concepto__img">
+        </section>
 
         <!-- Galeria imagen -->
         <section class="galeria-obra" aria-label="Galería de imágenes">
             <div class="galeria-obra__marco">
                 <button class="galeria-obra__flecha galeria-obra__flecha--izq" id="flecha-anterior" type="button"
                     aria-label="Imagen anterior">&lsaquo;</button>
-                <img src="imgs/obra4/foto1.png" alt="Render exterior estación ferroviaria"
-                    class="galeria-obra__img">
+                <img src="imgs/obra4/foto4.png" alt="Planimetría del parque urbano" class="galeria-obra__img">
                 <button class="galeria-obra__flecha galeria-obra__flecha--der" id="flecha-siguiente" type="button"
                     aria-label="Imagen siguiente">&rsaquo;</button>
-                <p class="galeria-obra__contador">1/4</p>
+                <p class="galeria-obra__contador">1 / 9</p>
             </div>
-            <p class="galeria-obra__pie">Lista externa del edificio conector sobre el parque</p>
+            <p class="galeria-obra__pie">Planimetría del parque urbano</p>
             <ul class="miniaturas">
-                <li><button class="miniatura" type="button" aria-label="Ver imagen 1"><img src="imgs/obra4/foto1.png"
-                            alt="Render exterior estación ferroviaria" class="miniatura__img"></button></li>
-                <li><button class="miniatura" type="button" aria-label="Ver imagen 2"><img src="imgs/obra4/foto13.png"
-                            alt="Esquemas de análisis del contexto inmediato" class="miniatura__img"></button></li>
-                <li><button class="miniatura" type="button" aria-label="Ver imagen 3"><img src="imgs/obra4/foto4.png"
-                            alt="Planimetría del parque urbano"class="miniatura__img"></button></li>
-                <li><button class="miniatura" type="button" aria-label="Ver imagen 4"><img src="imgs/obra4/foto5.png"
-                            alt="Planimetría del primer nivel"class="miniatura__img"></button></li>
-                <li><button class="miniatura" type="button" aria-label="Ver imagen 5"><img src="imgs/obra4/foto6.png"
-                            alt="Planimetría del segundo nivel"class="miniatura__img"></button></li>
-                <li><button class="miniatura" type="button" aria-label="Ver imagen 6"><img src="imgs/obra4/foto7.png"
-                            alt="Planimetría del tercer nivel"class="miniatura__img"></button></li>
-                <li><button class="miniatura" type="button" aria-label="Ver imagen 7"><img src="imgs/obra4/foto8.png"
-                            alt="Cortes de la estación"class="miniatura__img"></button></li>
-                <li><button class="miniatura" type="button" aria-label="Ver imagen 8"><img src="imgs/obra4/foto9.png"
-                            alt="Cortes de la estación"class="miniatura__img"></button></li>
-                <li><button class="miniatura" type="button" aria-label="Ver imagen 9"><img src="imgs/obra4/foto10.png"
-                            alt="Elevaciones de la estación"class="miniatura__img"></button></li>
-                <li><button class="miniatura" type="button" aria-label="Ver imagen 10"><img src="imgs/obra4/foto11.png"
-                            alt="Isométrica de estructura"class="miniatura__img"></button></li>
-                <li><button class="miniatura" type="button" aria-label="Ver imagen 11"><img src="imgs/obra4/foto12.png"
-                            alt="Render parque urbano"class="miniatura__img"></button></li>
+
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 1"><img src="imgs/obra4/foto4.png"
+                            alt="Planimetría del parque urbano" class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 2"><img src="imgs/obra4/foto5.png"
+                            alt="Planimetría del primer nivel" class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 3"><img src="imgs/obra4/foto6.png"
+                            alt="Planimetría del segundo nivel" class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 4"><img src="imgs/obra4/foto7.png"
+                            alt="Planimetría del tercer nivel" class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 5"><img src="imgs/obra4/foto8.png"
+                            alt="Cortes de la estación (1 de 2)" class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 6"><img src="imgs/obra4/foto9.png"
+                            alt="Cortes de la estación (2 de 2)" class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 7"><img src="imgs/obra4/foto10.png"
+                            alt="Elevaciones de la estación" class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 8"><img src="imgs/obra4/foto11.png"
+                            alt="Isométrica de estructura" class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 9"><img src="imgs/obra4/foto12.png"
+                            alt="Render parque urbano" class="miniatura__img"></button></li>
 
             </ul>
         </section>
 
-        <dl class="ficha">
-            <div class="ficha__fila">
-                <dt>Proyecto</dt>
-                <dd>Proyecto de título</dd>
-            </div>
-            <div class="ficha__fila">
-                <dt>Institución</dt>
-                <dd>Facultad de Arquitectura · Universidad Mayor</dd>
-            </div>
-            <div class="ficha__fila">
-                <dt>Autora</dt>
-                <dd>Javiera Torres Armijo</dd>
-            </div>
-        </dl>
-        
         <nav class="paginacion" aria-label="Otras obras">
-            <a href="index.html" class="boton">&larr; Todas las obras</a>
-            <a href="obra-1.html" class="boton">Siguiente obra &rarr;</a>
+            <a href="obra-3.html" class="boton" data-i18n="pag.prev3">&larr; Ir a obra 3</a>
+            <a href="index.html" class="boton" data-i18n="pag.todasNext">Todas las obras &rarr;</a>
         </nav>
     </main>
-    <footer class="pie">
+    <footer class="pie" id="contacto">
+        <div class="contenedor contacto">
+            <section class="contacto__texto">
+                <h2 class="titulo-gigante" data-i18n="pie.titulo">Contacto</h2>
+                <p class="contacto__lema" data-i18n="pie.lema">¿Tienes algún proyecto en mente? Conversemos</p>
+                <div class="contacto__botones">
+                    <span class="boton boton--texto"><span data-i18n="pie.correo">Correo:</span> <span class="contacto__correo">torresarmijo.arq@gmail.com</span></span>
+                    <a href="https://www.linkedin.com/in/javiera-torres-4b315a322/" class="boton" target="_blank"
+                        rel="noopener">LinkedIn &rarr;</a>
+                </div>
+                <p class="contacto__lugar"><i class="fa-solid fa-location-dot"></i> <span data-i18n="pie.lugar">Valencia, España</span></p>
+            </section>
+            <form action="mailto:torresarmijo.arq@gmail.com" class="formulario" method="post" enctype="text/plain"
+                id="formulario" novalidate>
+                <div class="formulario__campo">
+                    <label for="nombre" class="formulario__etiqueta" data-i18n="lbl.nombre">Nombre</label>
+                    <input type="text" class="formulario__control" id="nombre" name="nombre" required>
+                </div>
+                <div class="formulario__campo">
+                    <label for="correo" class="formulario__etiqueta" data-i18n="lbl.correo">Correo</label>
+                    <input type="email" class="formulario__control" id="correo" name="correo" required>
+                </div>
+                <div class="formulario__campo">
+                    <label for="mensaje" class="formulario__etiqueta" data-i18n="lbl.mensaje">Mensaje</label>
+                    <textarea name="mensaje" id="mensaje" class="formulario__control" rows="3" required></textarea>
+                </div>
+                <button class="boton" type="submit" data-i18n="lbl.enviar">Enviar</button>
+                <p class="formulario__mensaje" id="mensaje-formulario" role="status"></p>
+            </form>
+        </div>
         <div class="contenedor pie__interior">
-            <p>&copy; <span id="anio">2026</span> Javiera Torres Armijo</p>
-            <div class="pie__contacto"><a href="mailto:torresarmijo.arq@gmail.com">torresarmijo.arq@gmail.com</a><a
-                    href="https://www.linkedin.com/in/javiera-torres-4b315a322/" target="_blank"
-                    rel="noopener">LinkedIn</a>
-                <a href="https://online.fliphtml5.com/nnvds/bmsx" target="_blank" rel="noopener">Portafolio
-                    completo</a>
-            </div>
+            <p>&copy; <span id="anio">2026</span> Javiera Torres Armijo</p>            
         </div>
     </footer>
+    <script src="idiomas.js" defer></script>
     <script src="main.js" defer></script>
 </body>
 

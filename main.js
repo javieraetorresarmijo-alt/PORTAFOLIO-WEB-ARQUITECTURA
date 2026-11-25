@@ -1,24 +1,31 @@
-
 //año actual en el pie de la pagina
 const anio = document.querySelector("#anio");
 if (anio) {
     anio.textContent = new Date().getFullYear();
 }
-//flechas para mover la fila de obras(en index)
+//rueda del raton mueve la fila de obras en horizontal
 const fila = document.querySelector(".obras__fila");
-const flechaIzq = document.querySelector("#flecha-izq");
-const flechaDer = document.querySelector("#flecha-der");
+const zonaObras = document.querySelector("main.obras");
 
-if (fila && flechaIzq && flechaDer) {
-    // direccion: -1 izquierda, 1 derecha
-    const mover = (direccion) => {
-        const tarjeta = fila.querySelector(".obras__item");
-        const hueco = parseFloat(getComputedStyle(fila).columnGap);
-        fila.scrollBy({ left: direccion * (tarjeta.offsetWidth + hueco), behavior: "smooth" });
-    };
-    flechaIzq.addEventListener("click", () => mover(-1));
-    flechaDer.addEventListener("click", () => mover(1));
+if(fila&&zonaObras){
+    zonaObras.addEventListener("wheel", (evento) => {
+        //si el gesto es horizontal, el navegador lo maneja solo
+        if (Math.abs(evento.deltaX) > Math.abs(evento.deltaY)) return;
+
+        //firefox puede enviar el valor en lineas en vez de pixeles
+        const delta = evento.deltaMode ===1 ? evento.deltaY * 40 : evento.deltaY;
+
+        const alInicio = fila.scrollLeft <= 0;
+        const alFinal = fila.scrollLeft + fila.clientWidth >= fila.scrollWidth - 1;
+
+        //en los extremos dejo que la pagina siga su scroll normal 
+        if ((delta < 0 && alInicio) || (delta > 0 && alFinal)) return;
+
+        evento.preventDefault();
+        fila.scrollLeft += delta;
+    }, { passive: false });
 }
+
 
 //galeria de la obra: imagen grande, flechas, miniaturas
 const miniaturas = document.querySelectorAll(".miniatura");
@@ -80,7 +87,13 @@ if (miniaturas.length > 0) {
         if (evento.key === "ArrowLeft") mostrarImagen(actual - 1);
     });
 
-    mostrarImagen(0);
+   // al cambiar de idioma se actualizan los textos de la galeria y visor
+   const traducirGaleria = () => {
+    mostrarImagen(actual);
+    visor.querySelector(".visor__cerrar").setAttribute("aria-label", traducir("msg.cerrar"));
+   };
+   document.addEventListener("idioma-cambiado", traducirGaleria);
+   traducirGaleria();
     }
 
 
@@ -103,16 +116,16 @@ if (miniaturas.length > 0) {
             const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo);
 
             if (nombre.length < 2) {
-                mostrarAviso("Escribe tu nombre.", true);
+                mostrarAviso(traducir("msg.nombre"), true);
             } else if (!correoValido) {
-                mostrarAviso("Escribe un correo válido, por ejemplo nombre@correo.com", true);
+                mostrarAviso(traducir("msg.correo"), true);
             } else if (mensaje.length < 10) {
-                mostrarAviso("El mensaje es muy corto (mínimo 10 caracteres).", true);
+                mostrarAviso(traducir("msg.mensaje"), true);
             } else {
-                const asunto = "Contacto desde el portafolio";
-                const cuerpo = `Nombre: ${nombre}\nCorreo: ${correo}\n\n${mensaje}`;
+                const asunto = traducir("msg.asunto");
+                const cuerpo = `${traducir("msg.cuerpoNombre")}: ${nombre}\n${traducir("msg.cuerpoCorreo")}: ${correo}\n\n${mensaje}`;
                 window.location.href = `mailto:torresarmijo.arq@gmail.com?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
-                mostrarAviso("Abriendo tu programa de correo...", false);
+                mostrarAviso(traducir("msg.abriendo"), false);
                 formulario.reset();
             }
         });

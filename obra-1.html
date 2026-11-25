@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Representación gráfica concurso CORMA · Javiera Torres Armijo</title>
-    <meta name="description" content="Imágenes exterior e interior del proyecto presentado al concurso CORMA.">
+    <title data-i18n="o1.title">Liceo técnico Ten Ten · Javiera Torres Armijo</title>
+    <meta name="description" data-i18n-content="o1.desc"
+        content="Liceo técnico profesional de tres naves de madera en Ten Ten, Castro, para el concurso Corma 2020.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
@@ -19,66 +20,135 @@
             <a href="index.html" class="cabecera__nombre">Javiera Torres Armijo</a>
             <nav aria-label="Principal">
                 <ul class="menu">
-                    <li class="menu__item"><a href="index.html" aria-current="page" class="menu__enlace">Obras</a></li>
-                    <li class="menu__item"><a href="sobre-mi.html" class="menu__enlace">Sobre mí</a></li>
-                    <li class="menu__item"><a href="contacto.html" class="boton">Contacto &rarr;</a></li>
+                    <li class="menu__item"><a href="https://online.fliphtml5.com/nnvds/bmsx" class="boton boton--menu"
+                            target="_blank" rel="noopener" data-i18n="nav.portafolio">Portafolio
+                            completo &rarr;</a></li>
+                    <li class="menu__item"> <a href="index.html" class="menu__enlace" aria-current="page"
+                            data-i18n="nav.obras">Obras</a></li>
+                    <li class="menu__item"><a href="sobre-mi.html" class="menu__enlace" data-i18n="nav.sobre">Sobre
+                            mí</a></li>
+                    <li class="menu__item"><button class="boton boton--menu" id="boton-idioma" type="button"
+                            aria-label="Cambiar idioma">EN</button></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main class="contenedor obra">
         <header class="obra__encabezado">
-            <h1 class="titulo-gigante">Concurso CORMA 2021</h1>
-            <p class="obra__resumen">Imágenes exterior e interior del proyecto presentado al concurso CORMA</p>
+            <h1 class="titulo-gigante" data-i18n-html="o1.titulo">Liceo<br>técnico Ten - Ten</h1>
         </header>
-       <!-- Galeria imagen -->
-        <section class="galeria-obra" aria-label="Galería de imágenes">
-            <div class="galeria-obra__marco">
-                <button class="galeria-obra__flecha galeria-obra__flecha--izq" id="flecha-anterior" type="button" aria-label="Imagen anterior">&lsaquo;</button>
-                <img src="imgs/obra1/foto1.png" alt="Imagen exterior del proyecto concurso CORMA, con volúmenes de cubierta a dos aguas" class="galeria-obra__img">
-                <button class="galeria-obra__flecha galeria-obra__flecha--der" id="flecha-siguiente" type="button" aria-label="Imagen siguiente">&rsaquo;</button>
-                <p class="galeria-obra__contador">1/4</p>
-            </div>
-            <p class="galeria-obra__pie">Imagen exterior del proyecto del concurso CORMA, con volúmenes de cubierta a dos aguas</p>
-            <ul class="miniaturas">
-                <li><button class="miniatura" type="button" aria-label="Ver imagen 1"><img src="imgs/obra1/foto1.png" alt="Imagen exterior del proyecto del concurso CORMA, con volúmenes de cubierta a dos aguas" class="miniatura__img"></button></li>
-                <li><button class="miniatura" type="button" aria-label="Ver imagen 2"><img src="imgs/obra1/foto2.png" alt="Imagen interior 1" class="miniatura__img"></button></li>
-                <li><button class="miniatura" type="button" aria-label="Ver imagen 3"><img src="imgs/obra1/foto3.png" alt="Imagen interior 2" class="miniatura__img"></button></li>
-                <li><button class="miniatura" type="button" aria-label="Ver imagen 4"><img src="imgs/obra1/foto4.png" alt="Imagen interior 3" class="miniatura__img"></button></li>
-            </ul>
+        <!-- Imagen de portada -->
+        <img src="imgs/obra1/foto1.png"
+            alt="Imagen exterior del Liceo Técnico Ten Ten, con volúmenes de cubierta a dos aguas"
+            class="obra__principal">
+        <!-- Descripción del proyecto -->
+        <section class="concepto" aria-label="Descripción del proyecto">
+            <dl class="ficha">
+                <div class="ficha__fila">
+                    <dt data-i18n="ficha.proyecto">Proyecto</dt>
+                    <dd data-i18n="o1.proyecto">Taller VII · Concurso CORMA, Semana de la Madera 2020</dd>
+                </div>
+                <div class="ficha__fila">
+                    <dt data-i18n="ficha.descripcion">Descripción</dt>
+                    <dd data-i18n="o1.desc1">Liceo técnico profesional en Ten Ten (Castro), Región de los Lagos,
+                        especializado en actividades
+                        agropecuarias, turismo y silvicultura.</dd>
+                    <dd data-i18n="o1.desc2">Tres naves de madera unidas, como un gran invernadero. En cada nave se
+                        forman cajas con los
+                        programas del liceo y una circulación central con interrupciones evita un recorrido monótono.
+                    </dd>
+                    <dd data-i18n="o1.desc3">Estructura de madera de pino insigne. Las lucarnas, orientadas al norte de
+                        forma intencionada,
+                        dan luz natural a salas y huertos, además de permitir una ventilación convectiva dentro del
+                        recinto.</dd>
+                </div>
+                <div class="ficha__fila">
+                    <dt data-i18n="ficha.institucion">Institución</dt>
+                    <dd data-i18n="ficha.facultad">Facultad de Arquitectura · Universidad Mayor</dd>
+                </div>
+                <div class="ficha__fila">
+                    <dt data-i18n="ficha.autoras">Autoras</dt>
+                    <dd>Javiera Torres Armijo · Keila Hidalgo · Daniela Covarrubias</dd>
+                </div>
+            </dl>
+            <img src="imgs/obra1/foto5.png" alt="Esquemas de forma y estructura del Liceo Técnico Ten Ten"
+                class="concepto__img">
         </section>
 
-        <dl class="ficha">
-            <div class="ficha__fila">
-                <dt>Proyecto</dt>
-                <dd>Proyecto Taller VII · Concurso CORMA</dd>
+        <!-- Galeria imagen -->
+        <section class="galeria-obra" aria-label="Galería de imágenes">
+            <div class="galeria-obra__marco">
+                <button class="galeria-obra__flecha galeria-obra__flecha--izq" id="flecha-anterior" type="button"
+                    aria-label="Imagen anterior">&lsaquo;</button>
+                <img src="imgs/obra1/foto7.png" alt="Planta cubierta" class="galeria-obra__img">
+                <button class="galeria-obra__flecha galeria-obra__flecha--der" id="flecha-siguiente" type="button"
+                    aria-label="Imagen siguiente">&rsaquo;</button>
+                <p class="galeria-obra__contador">1 / 10</p>
             </div>
-            <div class="ficha__fila">
-                <dt>Institución</dt>
-                <dd>Facultad de Arquitectura · Universidad Mayor</dd>
-            </div>
-            <div class="ficha__fila">
-                <dt>Autora</dt>
-                <dd>Javiera Torres Armijo</dd>
-            </div>
-        </dl>
-    
+            <p class="galeria-obra__pie">Planta cubierta</p>
+            <ul class="miniaturas">
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 1"><img src="imgs/obra1/foto7.png"
+                            alt="Planta cubierta" class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 2"><img src="imgs/obra1/foto6.png"
+                            alt="Planta 1 nivel" class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 3"><img src="imgs/obra1/foto8.png"
+                            alt="Cortes fugados" class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 4"><img src="imgs/obra1/foto11.png"
+                            alt="Corte y elevación" class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 5"><img src="imgs/obra1/foto9.png"
+                            alt="Isometrica explotada de estructura" class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 7"><img src="imgs/obra1/foto10.png"
+                            alt="Escantillón" class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 8"><img src="imgs/obra1/foto2.png"
+                            alt="Imagen interior 1" class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 9"><img src="imgs/obra1/foto3.png"
+                            alt="Imagen interior 2" class="miniatura__img"></button></li>
+                <li><button class="miniatura" type="button" aria-label="Ver imagen 10"><img src="imgs/obra1/foto4.png"
+                            alt="Imagen interior 3" class="miniatura__img"></button></li>
+            </ul>
+        </section>
         <nav class="paginacion" aria-label="Otras obras">
-            <a href="index.html" class="boton">&larr; Todas las obras</a>
-            <a href="obra-2.html" class="boton">Siguiente obra &rarr;</a>
+            <a href="index.html" class="boton" data-i18n="pag.todas">&larr; Todas las obras</a>
+            <a href="obra-2.html" class="boton" data-i18n="pag.next2">Ir a obra 2 &rarr;</a>
         </nav>
     </main>
-    <footer class="pie">
+    <footer class="pie" id="contacto">
+        <div class="contenedor contacto">
+            <section class="contacto__texto">
+                <h2 class="titulo-gigante" data-i18n="pie.titulo">Contacto</h2>
+                <p class="contacto__lema" data-i18n="pie.lema">¿Tienes algún proyecto en mente? Conversemos</p>
+                <div class="contacto__botones">
+                    <span class="boton boton--texto"><span data-i18n="pie.correo">Correo:</span> <span
+                            class="contacto__correo">torresarmijo.arq@gmail.com</span></span>
+                    <a href="https://www.linkedin.com/in/javiera-torres-4b315a322/" class="boton" target="_blank"
+                        rel="noopener">LinkedIn &rarr;</a>
+                </div>
+                <p class="contacto__lugar"><i class="fa-solid fa-location-dot"></i> <span
+                        data-i18n="pie.lugar">Valencia, España</span></p>
+            </section>
+            <form action="mailto:torresarmijo.arq@gmail.com" class="formulario" method="post" enctype="text/plain"
+                id="formulario" novalidate>
+                <div class="formulario__campo">
+                    <label for="nombre" class="formulario__etiqueta" data-i18n="lbl.nombre">Nombre</label>
+                    <input type="text" class="formulario__control" id="nombre" name="nombre" required>
+                </div>
+                <div class="formulario__campo">
+                    <label for="correo" class="formulario__etiqueta" data-i18n="lbl.correo">Correo</label>
+                    <input type="email" class="formulario__control" id="correo" name="correo" required>
+                </div>
+                <div class="formulario__campo">
+                    <label for="mensaje" class="formulario__etiqueta" data-i18n="lbl.mensaje">Mensaje</label>
+                    <textarea name="mensaje" id="mensaje" class="formulario__control" rows="3" required></textarea>
+                </div>
+                <button class="boton" type="submit" data-i18n="lbl.enviar">Enviar</button>
+                <p class="formulario__mensaje" id="mensaje-formulario" role="status"></p>
+            </form>
+        </div>
         <div class="contenedor pie__interior">
             <p>&copy; <span id="anio">2026</span> Javiera Torres Armijo</p>
-            <div class="pie__contacto"><a href="mailto:torresarmijo.arq@gmail.com">torresarmijo.arq@gmail.com</a><a
-                    href="https://www.linkedin.com/in/javiera-torres-4b315a322/" target="_blank"
-                    rel="noopener">LinkedIn</a>
-                <a href="https://online.fliphtml5.com/nnvds/bmsx" target="_blank" rel="noopener">Portafolio
-                    completo</a>
-            </div>
         </div>
     </footer>
+    <script src="idiomas.js" defer></script>
     <script src="main.js" defer></script>
 </body>
 

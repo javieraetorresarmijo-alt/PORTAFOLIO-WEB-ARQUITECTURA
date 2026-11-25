@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javiera Torres Armijo · Arquitecta · Portafolio</title>
-    <meta name="description"
+    <title data-i18n="index.title">Javiera Torres Armijo · Arquitecta · Portafolio</title>
+    <meta name="description" data-i18n-content="index.desc"
         content="Portafolio de Javiera Torres Armijo, arquitecta, diseñadora gráfica y web. Trabajos seleccionados 2020 - 2025">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,9 +20,15 @@
             <a href="index.html" class="cabecera__nombre">Javiera Torres Armijo</a>
             <nav aria-label="Principal">
                 <ul class="menu">
-                    <li class="menu__item"> <a href="index.html" class="menu__enlace" aria-current="page">Obras</a></li>
-                    <li class="menu__item"><a href="sobre-mi.html" class="menu__enlace">Sobre mí</a></li>
-                    <li class="menu__item"><a href="contacto.html" class="boton">Contacto &rarr;</a></li>
+                    <li class="menu__item"><a href="https://online.fliphtml5.com/nnvds/bmsx" class="boton boton--menu"
+                            target="_blank" rel="noopener" data-i18n="nav.portafolio">Portafolio
+                            completo &rarr;</a></li>
+                    <li class="menu__item"> <a href="index.html" class="menu__enlace" aria-current="page"
+                            data-i18n="nav.obras">Obras</a></li>
+                    <li class="menu__item"><a href="sobre-mi.html" class="menu__enlace" data-i18n="nav.sobre">Sobre
+                            mí</a></li>
+                    <li class="menu__item"><button class="boton boton--menu" id="boton-idioma" type="button"
+                            aria-label="Cambiar idioma">EN</button></li>
                 </ul>
             </nav>
         </div>
@@ -30,16 +36,16 @@
     <main class="obras">
         <ul class="obras__fila">
             <li class="obras__item presentacion">
-                <h1 class="presentacion__texto">Disfruto dar vida a una idea, desde el primer boceto hasta la
+                <h1 class="presentacion__texto" data-i18n="index.presentacion">Disfruto dar vida a una idea, desde el primer boceto hasta la
                     renderización final, siempre con un ojo puesto en la estética y el impacto gráfico.</h1>
             </li>
             <li class="obras__item">
                 <a href="obra-1.html" class="tarjeta">
-                    <img src="imgs/index/foto1.png" alt="Imagen principal de representación gráfica concurso CORMA"
+                    <img src="imgs/index/foto1.png" alt="Imagen principal del Liceo Técnico Ten Ten"
                         class="tarjeta__img" width="867" height="596">
                     <div class="tarjeta__texto">
-                        <h2 class="tarjeta__titulo">Proyecto Concurso CORMA 2021</h2>
-                        <p class="tarjeta__sub">Concurso CORMA · Taller VII &rarr;</p>
+                        <h2 class="tarjeta__titulo" data-i18n="index.c1.titulo">Liceo técnico Ten Ten</h2>
+                        <p class="tarjeta__sub" data-i18n="index.c1.sub">Concurso CORMA · Taller VII &rarr;</p>
                     </div>
                 </a>
             </li>
@@ -48,8 +54,8 @@
                     <img src="imgs/index/foto3.png" alt="Imagen principal de Parque conector Mapocho"
                         class="tarjeta__img" height="657" width="912" loading="lazy">
                     <div class="tarjeta__texto">
-                        <h2 class="tarjeta__titulo">Parque conector Mapocho</h2>
-                        <p class="tarjeta__sub">Proyecto concurso Corma21 · Taller VIII &rarr;</p>
+                        <h2 class="tarjeta__titulo" data-i18n="index.c2.titulo">Parque conector Mapocho</h2>
+                        <p class="tarjeta__sub" data-i18n="index.c2.sub">Edificio puente · Taller VIII &rarr;</p>
                     </div>
                 </a>
             </li>
@@ -58,8 +64,8 @@
                     <img src="imgs/index/foto4.png" alt="Imagen principal de Polideportivo Vicuña" class="tarjeta__img"
                         height="657" width="928" loading="lazy">
                     <div class="tarjeta__texto">
-                        <h2 class="tarjeta__titulo">Polideportivo Vicuña</h2>
-                        <p class="tarjeta__sub">Proyecto polideportivo · Taller IX &rarr;</p>
+                        <h2 class="tarjeta__titulo" data-i18n="index.c3.titulo">Polideportivo Vicuña</h2>
+                        <p class="tarjeta__sub" data-i18n="index.c3.sub">Proyecto polideportivo · Taller IX &rarr;</p>
                     </div>
                 </a>
             </li>
@@ -69,34 +75,59 @@
                         alt="Imagen principal de Estación Terminal, Proyecto Tren Santiago - Melipilla"
                         class="tarjeta__img" width="928" height="657" loading="lazy">
                     <div class="tarjeta__texto">
-                        <h2 class="tarjeta__titulo">Estación terminal<br>Tren Santiago - Melipilla</h2>
-                        <p class="tarjeta__sub">Proyecto de título &rarr;</p>
+                        <h2 class="tarjeta__titulo" data-i18n="index.c4.titulo">Estación terminal<br>Tren Santiago - Melipilla</h2>
+                        <p class="tarjeta__sub" data-i18n="index.c4.sub">Proyecto de título &rarr;</p>
                     </div>
                 </a>
             </li>
         </ul>
         <div class="obras__controles contenedor">
-            <p class="obras__aviso">Desliza para ver más obras</p>
-            <div class="obras__botones">
-                <button class="boton boton--flecha" id="flecha-izq" type="button"
-                    aria-label="Obras anteriores">&larr;</button>
-                <button class="boton boton--flecha" id="flecha-der" type="button"
-                    aria-label="Obras siguientes">&rarr;</button>
-            </div>
+            <p class="obras__aviso">
+                <span class="raton" aria-hidden="true"></span>
+                <span data-i18n="index.aviso">Desplaza para ver más obras</span>                
+            </p>
         </div>
     </main>
-    <footer class="pie">
+    <footer class="pie" id="contacto">
+        <div class="contenedor contacto">
+            <section class="contacto__texto">
+                <h2 class="titulo-gigante" data-i18n="pie.titulo">Contacto</h2>
+                <p class="contacto__lema" data-i18n="pie.lema">¿Tienes algún proyecto en mente? Conversemos</p>
+                <div class="contacto__botones">
+                    <span class="boton boton--texto">
+                        <span data-i18n="pie.correo">Correo:
+                    </span> <span class="contacto__correo">torresarmijo.arq@gmail.com</span></span>
+                    <a href="https://www.linkedin.com/in/javiera-torres-4b315a322/" class="boton" target="_blank"
+                        rel="noopener">LinkedIn &rarr;</a>
+                </div>
+                <p class="contacto__lugar"><i class="fa-solid fa-location-dot"></i> <span
+                        data-i18n="pie.lugar">Valencia, España</span></p>
+            </section>
+            <form action="mailto:torresarmijo.arq@gmail.com" class="formulario" method="post" enctype="text/plain"
+                id="formulario" novalidate>
+                <div class="formulario__campo">
+                    <label for="nombre" class="formulario__etiqueta" data-i18n="lbl.nombre">Nombre</label>
+                    <input type="text" class="formulario__control" id="nombre" name="nombre" required>
+                </div>
+                <div class="formulario__campo">
+                    <label for="correo" class="formulario__etiqueta" data-i18n="lbl.correo">Correo</label>
+                    <input type="email" class="formulario__control" id="correo" name="correo" required>
+                </div>
+                <div class="formulario__campo">
+                    <label for="mensaje" class="formulario__etiqueta" data-i18n="lbl.mensaje">Mensaje</label>
+                    <textarea name="mensaje" id="mensaje" class="formulario__control" rows="3" required></textarea>
+                </div>
+                <button class="boton" type="submit" data-i18n="lbl.enviar">Enviar</button>
+                <p class="formulario__mensaje" id="mensaje-formulario" role="status"></p>
+            </form>
+        </div>
         <div class="contenedor pie__interior">
             <p>&copy; <span id="anio">2026</span> Javiera Torres Armijo</p>
-            <div class="pie__contacto"><a href="mailto:torresarmijo.arq@gmail.com">torresarmijo.arq@gmail.com</a><a
-                    href="https://www.linkedin.com/in/javiera-torres-4b315a322/" target="_blank"
-                    rel="noopener">LinkedIn</a>
-                <a href="https://online.fliphtml5.com/nnvds/bmsx" target="_blank" rel="noopener">Portafolio
-                    completo</a>
-            </div>
         </div>
     </footer>
+    <script src="idiomas.js" defer></script>
     <script src="main.js" defer></script>
+
 </body>
 
 </html>
